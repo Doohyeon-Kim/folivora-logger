@@ -19,12 +19,15 @@ class LoggerUtil {
 
 class _Emojis {
   String log = '🪵';
+  String message = '💬';
   String info = '💡';
   String debug = '🐛';
   String warning = '⚠️';
   String error = '🛑';
   String exception = '🚫';
   String build = '🏗';
+  String send = '➡️';
+  String receive = '⬅️';
   String robot = '🤖';
   String heart = '❤️';
   String poop = '💩️';

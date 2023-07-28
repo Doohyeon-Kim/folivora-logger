@@ -43,7 +43,7 @@ class WarningLogger implements Logger {
 
 class LogLogger implements Logger {
   LogLogger(dynamic message) {
-    LoggerUtil.createLogger(LoggerUtil.emojis.robot, message);
+    LoggerUtil.createLogger(LoggerUtil.emojis.message, message);
   }
 }
 
@@ -63,7 +63,7 @@ class HttpRequestLogger implements Logger {
   HttpRequestLogger({required http.Request httpRequest}) {
     String logMessage =
         "Http Request ${DateTime.now()}\nURI: ${httpRequest.url}\nMethod: ${httpRequest.method}\nheaders: ${httpRequest.headers}\nBody: ${httpRequest.body}";
-    LoggerUtil.createLogger(LoggerUtil.emojis.robot, logMessage);
+    LoggerUtil.createLogger(LoggerUtil.emojis.send, logMessage);
   }
 }
 
@@ -71,7 +71,7 @@ class MultipartRequestLogger implements Logger {
   MultipartRequestLogger({required http.MultipartRequest multipartRequest}) {
     String logMessage =
         "Http Request ${DateTime.now()}\nURI: ${multipartRequest.url}\nMethod: ${multipartRequest.method}\nheaders: ${multipartRequest.headers}\nfiles: ${multipartRequest.files}";
-    LoggerUtil.createLogger(LoggerUtil.emojis.robot, logMessage);
+    LoggerUtil.createLogger(LoggerUtil.emojis.send, logMessage);
   }
 }
 
@@ -84,7 +84,7 @@ class HttpResponseLogger implements Logger {
             "Http Response ${DateTime.now()}\nStatus Code: ${httpResponse.statusCode}\nBody: ${httpResponse.body}"
         : logMessage =
             "Http Response ${DateTime.now()}\nStatus Code: ${httpResponse.statusCode}\nHeaders ${httpResponse.headers}\nBody: ${httpResponse.body}";
-    LoggerUtil.createLogger(LoggerUtil.emojis.robot, logMessage);
+    LoggerUtil.createLogger(LoggerUtil.emojis.receive, logMessage);
   }
 }
 
@@ -97,7 +97,7 @@ class HtmlRequestLogger implements Logger {
       int? methodCount}) {
     late String logMessage =
         "Request ${DateTime.now()}\nURI: $uri\nMethod: $method\nheaders: $headers\nBody: $body";
-    LoggerUtil.createLogger(LoggerUtil.emojis.robot, logMessage);
+    LoggerUtil.createLogger(LoggerUtil.emojis.send, logMessage);
   }
 }
 
@@ -113,6 +113,6 @@ class HtmlResponseLogger implements Logger {
             "${DateTime.now()}\nResponse\nStatus Code: $statusCode\nBody: $body"
         : logMessage =
             "${DateTime.now()}\nResponse\nStatus Code: $statusCode\nHeaders $printHeaders\nBody: $body";
-    LoggerUtil.createLogger(LoggerUtil.emojis.robot, logMessage);
+    LoggerUtil.createLogger(LoggerUtil.emojis.receive, logMessage);
   }
 }

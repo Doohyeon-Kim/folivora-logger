@@ -7,6 +7,12 @@ class HeartLogger implements FunLogger {
   }
 }
 
+class RobotLogger implements FunLogger {
+  RobotLogger(dynamic message) {
+    LoggerUtil.createLogger(LoggerUtil.emojis.robot, message);
+  }
+}
+
 class PoopLogger implements FunLogger {
   PoopLogger(dynamic message) {
     LoggerUtil.createLogger(LoggerUtil.emojis.poop, message);

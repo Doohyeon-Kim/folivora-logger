@@ -1,6 +1,6 @@
 name: hondooye_logger
 description: A useful logger.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/Doohyeon-Kim/hondooye-logger
 
 environment:
